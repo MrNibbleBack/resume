@@ -1,0 +1,39 @@
+<div>
+    <p>Name: {{name}} </p>
+    <p>
+        {{#if title}}
+        Title: {{title}}
+        {{/if}}
+    </p>
+    <p>
+        {{#if position}}
+        Position: {{position}}
+        {{/if}}
+    </p>
+    <p>
+        {{#if department}}
+        Department: {{department}}
+        {{/if}}
+    </p>
+    <p>
+        {{#if email}}
+    <p>email: <a href="mailto: {{email}}">{{email}}</a></p>
+    {{/if}}
+    </p>
+    <p>
+        {{#if skills}}
+        Skills:
+        {{#each skills}}
+        {{this}},
+        {{/each}}
+        {{/if}}
+    </p>
+    <p>
+        {{#if technologies}}
+        Technologies:
+        {{#each technologies}}
+        {{this}},
+        {{/each}}
+        {{/if}}
+    </p>
+</div>

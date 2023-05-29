@@ -1,0 +1,19 @@
+<div>
+    <p>Project name: {{name}} </p>
+    {{#if description}}
+    <p>Description: {{description}} </p>
+    {{/if}}
+    {{#if status}}
+    <p>
+        Status: {{status}}
+    </p>
+    {{/if}}
+    {{#if technologies}}
+    <p>
+        Technologies:
+        {{#each technologies}}
+        {{this}},
+        {{/each}}
+    </p>
+    {{/if}}
+</div>
