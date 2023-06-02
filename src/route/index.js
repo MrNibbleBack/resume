@@ -301,123 +301,6 @@ router.get('/person', function (req, res) {
             },
           ],
         },
-
-        {
-          company: 'BOOBLE',
-          title: 'Software Engineer',
-          startDate: '2012-06-01',
-          endDate: '2016-12-31',
-          responsibilities: [
-            'Developed new features for Google Maps',
-            'Worked on improving search algorithms',
-          ],
-          year_founded: 1990,
-          industry: 'Technology',
-          employees: [
-            {
-              name: 'John Smith',
-              position: 'CEO',
-              department: 'Executive',
-              projects: [
-                {
-                  name: 'Project Alpha',
-                  description:
-                    'Developing new software platform',
-                  status: 'In Progress',
-                  teams: [
-                    {
-                      team_name: 'Awesome Team',
-                      team_leader: {
-                        name: 'John Smith',
-                        title: 'Team Leader',
-                        email: 'john.smith@example.com',
-                      },
-                      team_members: [
-                        {
-                          name: 'Alice Johnson',
-                          title: 'Software Engineer',
-                          email:
-                            'alice.johnson@example.com',
-                          skills: ['Java', 'Python', 'SQL'],
-                          projects: [
-                            {
-                              name: 'Project A',
-                              description:
-                                'Lorem ipsum dolor sit amet',
-                              technologies: [
-                                'Java',
-                                'Spring Framework',
-                              ],
-                              team_members: [
-                                {
-                                  name: 'Bob Lee',
-                                  title:
-                                    'Software Engineer',
-                                },
-                                {
-                                  name: 'Cindy Chen',
-                                  title: 'UI Designer',
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
-                },
-
-                {
-                  name: 'Project Betta',
-                  description:
-                    'Developing new software platform',
-                  status: 'In Progress',
-                  teams: [
-                    {
-                      team_name: 'Awesome Team',
-                      team_leader: {
-                        name: 'John Smith',
-                        title: 'Team Leader',
-                        email: 'john.smith@example.com',
-                      },
-                      team_members: [
-                        {
-                          name: 'Alice Johnson',
-                          title: 'Software Engineer',
-                          email:
-                            'alice.johnson@example.com',
-                          skills: ['Java', 'Python', 'SQL'],
-                          projects: [
-                            {
-                              name: 'Project A',
-                              description:
-                                'Lorem ipsum dolor sit amet',
-                              technologies: [
-                                'Java',
-                                'Spring Framework',
-                              ],
-                              team_members: [
-                                {
-                                  name: 'Bob Lee',
-                                  title:
-                                    'Software Engineer',
-                                },
-                                {
-                                  name: 'Cindy Chen',
-                                  title: 'UI Designer',
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
       ],
     },
   })
@@ -519,6 +402,107 @@ router.get('/bio', function (req, res) {
       field: 'Invention',
     },
   })
+})
+
+router.get('/car', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('car', {
+    layout: 'basic',
+    page: {
+      title: 'Resume | Car',
+    },
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2022,
+    color: 'silver',
+    features: {
+      interior: {
+        seats: {
+          material: 'leather',
+          color: 'black',
+          heated: true,
+          ventilated: true,
+        },
+        dashboard: {
+          material: 'plastic',
+          color: 'black',
+          display: {
+            type: 'LCD',
+            size: 10.1,
+            resolution: '1280x720',
+            touchscreen: true,
+          },
+        },
+        audio: {
+          system: 'JBL',
+          speakers: 8,
+          subwoofer: true,
+          bluetooth: true,
+          USB: true,
+        },
+      },
+      exterior: {
+        wheels: {
+          size: 18,
+          type: 'alloy',
+          color: 'silver',
+        },
+        headlights: {
+          type: 'LED',
+          brightness: 'high',
+          automatic: true,
+        },
+        sunroof: {
+          type: 'panoramic',
+          size: 'large',
+          automatic: true,
+        },
+      },
+      safety: {
+        airbags: {
+          front: 2,
+          side: 2,
+          knee: 2,
+          rear: 2,
+        },
+        assistance: {
+          blind_spot_monitoring: true,
+          rear_cross_traffic_alert: true,
+          lane_departure_warning: true,
+          adaptive_cruise_control: true,
+          collision_warning: true,
+        },
+      },
+    },
+    engine: {
+      type: 'gasoline',
+      displacement: 2.5,
+      horsepower: 206,
+      torque: 186,
+      transmission: {
+        type: 'automatic',
+        gears: 8,
+      },
+    },
+    fuel_economy: {
+      city: 28,
+      highway: 39,
+      combined: 32,
+    },
+    price: {
+      base: 25900,
+      destination: 995,
+      options: {
+        navigation: 1200,
+        moonroof: 800,
+        premium_paint: 595,
+      },
+      total: 28990,
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
