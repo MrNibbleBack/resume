@@ -1,0 +1,56 @@
+<div>
+    <section>
+        <h1>{{name}}</h1>
+        <hr>
+        <div>
+            <p>Date of birth: {{birthdate}} </p>
+            <p>Place of birth: {{birthplace}} </p>
+            <p>Date of death: {{deathdate}} </p>
+            <p>Place of death: {{deathplace}} </p>
+            <p>Nationality: {{nationality}} </p>
+            <p>Occupation: {{occupation}} </p>
+        </div>
+        <div>
+            <hr>
+            {{> title data="Known for:"}}
+            <ol>
+                {{#each known_for}}
+                <li>
+                    <p> {{this}}; </p>
+                </li>
+                {{/each}}
+            </ol>
+            </p>
+        </div>
+        <div>
+            {{> bioinfo chapter="Education:" dim=education }}
+            {{> bioinfo chapter="Notable publications:" dim=notable_publications }}
+            {{> bioinfo chapter="Partners:" dim=partners }}
+            {{> bioinfo chapter="Awards:" dim=awards }}
+            {{> influence chapter="Influences:" dim=influences}}
+            {{> influence chapter="Influenced:" dim=influenced}}
+            <div>
+                <hr>
+                {{> title data="Quotes" }}
+                <ul>
+                    {{#each quotes}}
+                    <li>
+                        <p><q>{{this}}</q></p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{> bioinfo chapter="Major discoveries:" dim=major_discoveries }}
+            <div>
+                <hr>
+                {{> title data="Contributions:" }}
+                {{#with contributions}}
+                <p><b>Title:</b> {{title}} </p>
+                <p><b>Description:</b> {{description}} </p>
+                <p><b>Year:</b> {{year}} </p>
+                <p><b>Field:</b> {{field}}</p>
+                {{/with}}
+            </div>
+        </div>
+    </section>
+</div>

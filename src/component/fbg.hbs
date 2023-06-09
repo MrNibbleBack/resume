@@ -1,0 +1,15 @@
+<div>
+    <p class="text-center"> <b> Groups: </b></p>
+    <p class="text-center"> ID:
+        <span class="badge text-bg-warning"> {{id}} </span>
+    <p class="text-center"> Name:
+        <span class="badge text-bg-warning"> {{name}} </span>
+    </p>
+    <p class="text-center"> Description:
+        <span class="badge text-bg-warning"><i> {{description}} </i></span>
+    </p>
+    <p class="text-center"><b> Members: </b></p>
+    {{#each members}}
+    {{> fbu }}
+    {{/each}}
+</div>
