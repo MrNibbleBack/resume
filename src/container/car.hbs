@@ -1,0 +1,226 @@
+<section>
+    <h1 class="text-center">
+        <span class="badge bg-secondary">Car</span>
+    </h1>
+    <hr>
+    <br>
+    <div>
+        <p class="text-center">Make by: <span class="badge text-bg-info"> {{make}} </span></p>
+        <p class="text-center">Model: <span class="badge text-bg-info"> {{model}} </span></p>
+        <p class="text-center">Year: <span class="badge text-bg-info"> {{year}} </span></p>
+        <p class="text-center">Color: <span class="badge text-bg-info"> {{color}} </span></p>
+        <div>
+            <br>
+            <hr>
+            <h3>
+                <p class="text-center"><b>Features</b></p>
+            </h3>
+            <br>
+            {{#with features}}
+            <div>
+                <h4>
+                    <p class="text-center"><b>Interior</b></p>
+                    {{#with interior}}
+                </h4>
+                <br>
+                <div>
+                    <h5>
+                        <p class="text-center"><b>Seats</b></p>
+                    </h5>
+                    {{#with seats}}
+                    <p class="text-center">Material: {{material}} </p>
+                    <p class="text-center">Color: {{color}} </p>
+                    <p class="text-center">Heated: {{> bool what=heated }} </p>
+                    <p class="text-center">Ventilated: {{> bool what=ventilated}} </p>
+                    {{/with}}
+                </div>
+                <br>
+                <hr>
+                <div>
+                    <h5>
+                        <p class="text-center"><b>Dashboard</b></p>
+                    </h5>
+                    {{#with dashboard}}
+                    <p class="text-center">Material: {{material}} </p>
+                    <p class="text-center">Color: {{color}} </p>
+                    <br>
+                    <div>
+                        <h6>
+                            <p class="text-center"><b>Display</b></p>
+                        </h6>
+                        {{#with display}}
+                        <p class="text-center">Type: {{type}} </p>
+                        <p class="text-center">Size: {{size}} </p>
+                        <p class="text-center">Resolution: {{resolution}} </p>
+                        <p class="text-center">Touchscreen: {{> bool what=touchscreen}} </p>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+                <hr>
+                <br>
+                <div>
+                    <h5>
+                        <p class="text-center"><b>Audio</b></p>
+                    </h5>
+                    {{#with audio}}
+                    <p class="text-center">System: {{system}} </p>
+                    <p class="text-center">Speakers: {{speakers}} </p>
+                    <p class="text-center">Subwoofer: {{> bool what=subwoofer}} </p>
+                    <p class="text-center">Bluetooth: {{> bool what=bluetooth}} </p>
+                    <p class="text-center">USB: {{> bool what=USB}} </p>
+                    {{/with}}
+                </div>
+                {{/with}}
+            </div>
+            <hr>
+            <br>
+            <div>
+                <h4>
+                    <p class="text-center"><b>Exterior</b></p>
+                </h4>
+                {{#with exterior}}
+                <div>
+                    <h5>
+                        <p class="text-center"><b>Wheels</b></p>
+                    </h5>
+                    {{#with wheels}}
+                    <p class="text-center">Size: {{size}} </p>
+                    <p class="text-center">Type: {{type}} </p>
+                    <p class="text-center">Color: {{color}} </p>
+                    {{/with}}
+                </div>
+                <hr>
+                <br>
+                <div>
+                    <h5>
+                        <p class="text-center"><b>Headlights</b></p>
+                    </h5>
+                    {{#with headlights}}
+                    <p class="text-center">Type: {{type}} </p>
+                    <p class="text-center">Brightness: {{brightness}} </p>
+                    <p class="text-center">Automatic: {{> bool what=automatic}} </p>
+                    {{/with}}
+                </div>
+                <hr>
+                <br>
+                <div>
+                    <h5>
+                        <p class="text-center"><b>Sunroof</b></p>
+                    </h5>
+                    {{#with sunroof}}
+                    <p class="text-center">Type: {{type}} </p>
+                    <p class="text-center">Size: {{size}} </p>
+                    <p class="text-center">Automatic: {{> bool what=automatic}} </p>
+                    {{/with}}
+                </div>
+                {{/with}}
+                <hr>
+                <br>
+                <div>
+                    <h4>
+                        <p class="text-center"><b>Safety</b></p>
+                    </h4>
+                    {{#with safety}}
+                    <div>
+                        <h5>
+                            <p class="text-center"><b>Airbags</b></p>
+                        </h5>
+                        {{#with airbags}}
+                        {{> car name='Front' data=front }}
+                        {{> car name='Side' data=side }}
+                        {{> car name='Knee' data=knee }}
+                        {{> car name='Rear' data=rear }}
+                        {{/with}}
+                    </div>
+                    <div>
+                        <h5>
+                            <p class="text-center"><b>Assistance</b></p>
+                        </h5>
+                        {{#with assistance}}
+                        <p class="text-center">Blind spot monitoring: {{> bool what=blind_spot_monitoring }} </p>
+                        <p class="text-center">Rear cross traffic alert: {{> bool what=rear_cross_traffic_alert }}
+                        </p>
+                        <p class="text-center">Lane departure warning: {{> bool what=lane_departure_warning }} </p>
+                        <p class="text-center">Adaptive cruise control: {{> bool what=adaptive_cruise_control }}
+                        </p>
+                        <p class="text-center">Collision warning: {{> bool what=collision_warning }} </p>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+            {{/with}}
+        </div>
+        <hr>
+        <br>
+        <div>
+            <h3>
+                <p class="text-center"><b>Engine</b></p>
+            </h3>
+            {{#with engine}}
+            <p class="text-center">Type: {{type}} </p>
+            <p class="text-center">Displacement: {{displacement}} </p>
+            <p class="text-center">Horsepower: {{horsepower}} </p>
+            <p class="text-center">Torque: {{torque}} </p>
+            <div>
+                <h4>
+                    <p class="text-center"><b>Transmission</b></p>
+                </h4>
+                {{#with transmission}}
+                <p class="text-center">Type: {{type}} </p>
+                <p class="text-center">Gears: {{gears}} </p>
+                {{> car name='Type: ' data=type }}
+                {{> car name='Gears: ' data=gears }}
+                {{/with}}
+            </div>
+            {{/with}}
+        </div>
+        <hr>
+        <br>
+        <div>
+            <h3>
+                <p class="text-center"><b>Fuel economy</b></p>
+            </h3>
+            {{#with fuel_economy}}
+            {{> car name='City: ' data=city }}
+            {{> car name='Highway: ' data=highway }}
+            {{> car name='Combined: ' data=combined }}
+            {{/with}}
+        </div>
+        <div>
+            <hr>
+            <br>
+            <div>
+                <h3>
+                    <p class="text-center"><b>Price</b></p>
+                </h3>
+                {{#with price}}
+                <p class="text-center">Base: {{base}} EUR</p>
+                <p class="text-center">Destination: {{destination}} EUR</p>
+            </div>
+            <hr>
+            <br>
+            <div>
+                <h4>
+                    <p class="text-center"><b>Options</b></p>
+                </h4>
+                {{#with options}}
+                <p class="text-center">Navigation: {{navigation}} EUR</p>
+                <p class="text-center">Moonroof: {{moonroof}} EUR</p>
+                <p class="text-center">Premium paint: {{premium_paint}} EUR</p>
+                {{/with}}
+            </div>
+            <br>
+            <hr>
+            <hr>
+            <br>
+            <div>
+                <h3>
+                    <p class="text-center">Total: {{total}} EUR</p>
+                </h3>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+</section>

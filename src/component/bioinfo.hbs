@@ -1,0 +1,42 @@
+<div>
+    <hr>
+    {{> title data=chapter }}
+    <ul>
+        {{#each dim}}
+        <li>
+            {{#with this}}
+            {{#if degree}}
+            <p><b>Degree:</b> {{degree}}</p>
+            {{/if}}
+            {{#if institution}}
+            <p><b>Institution:</b> {{institution}}</p>
+            {{/if}}
+            {{#if title}}
+            <p><b>Title:</b> {{title}} </p>
+            {{/if}}
+            {{#if name}}
+            <p><b>Name:</b> {{name}} </p>
+            {{/if}}
+            {{#if year}}
+            <p><b>Year:</b> {{year}} </p>
+            {{/if}}
+            {{#if description}}
+            <p><b>Description:</b> {{description}} </p>
+            {{/if}}
+            {{#if field}}
+            <p><b>Field:</b> {{field}}</p>
+            {{/if}}
+            {{#if relationship}}
+            <p><b>Relationship:</b> {{relationship}}</p>
+            {{/if}}
+            {{#if years}}
+            <p><b>Years:</b> {{years}}</p>
+            {{/if}}
+            {{#if publisher}}
+            <p><b>Publisher:</b> {{publisher}}</p>
+            {{/if}}
+            {{/with}}
+        </li>
+        {{/each}}
+    </ul>
+</div>

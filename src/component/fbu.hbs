@@ -1,0 +1,22 @@
+<div>
+    <p class="text-center"> ID:
+        <span class="badge text-bg-info"> {{id}} </span>
+    <p class="text-center"> Name:
+        <span class="badge text-bg-info"> {{name}} </span>
+    </p>
+    <p class="text-center"> Gender:
+        <span class="badge text-bg-info"> {{gender}} </span>
+    </p>
+    <p class="text-center"> Age:
+        <span class="badge text-bg-info"> {{age}} </span>
+    </p>
+    <br>
+    <div>
+        {{#each mutual_friends}}
+        <p class="text-center">
+            <b>Mutual friends: </b> {{> fbu }}
+        </p>
+        <br>
+        {{/each}}
+    </div>
+</div>
