@@ -1,0 +1,46 @@
+<section>
+    <div>
+        <h1 class="text-center">
+            <span class="badge bg-primary"> {{name}} </span>
+        </h1>
+    </div>
+    <hr>
+    <div>
+        {{#each users}}
+        <hr>
+        <p class="text-center"><b> Users: </b></p>
+        {{> fbu }}
+        <hr>
+        <br>
+        <div>
+            {{#each friends}}
+            <p class="text-center"> <b>Friends: </b></p>
+            {{> fbu }}
+            {{!-- {{#each mutual_friends}}
+            <p class="text-center"> <b>Mutual friends: </b> {{> fbu }} </p>
+            <br>
+            {{/each}} --}}
+            <div>
+                {{#each groups}}
+                {{> fbg }}
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+        <div>
+            {{#each groups}}
+            {{> fbg }}
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+</section>
+
+{{!-- <div class="card" style="width: 20rem; height: 20rem;">
+    <img src="#" class="card-img-top" alt={{name}}>
+    <div class="card-body">
+        <h5 class="card-title"> {{name}} </h5>
+        <p class="card-text">content</p>
+        <a href="#" class="btn btn-primary">Add friend</a>
+    </div>
+</div> --}}
