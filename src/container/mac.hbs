@@ -1,0 +1,133 @@
+<section>
+    <h1 class="text-center">
+        <span class="badge bg-secondary"> {{name}} </span>
+    </h1>
+    <hr>
+    <div>
+        <br>
+        <p class="text-center"><i> {{description}} </i></p>
+        <p class="text-center">Price: {{price}} </p>
+        <p class="text-center">Category: {{category}} </p>
+    </div>
+    <hr>
+    <br>
+    <div>
+        {{> titlen title='Features' main=true }}
+        <br>
+        {{#with features}}
+        <div>
+            {{> titlen title='Processor' notmain=true }}
+            <br>
+            {{#with processor}}
+            {{> mac name='Brand: ' data=brand}}
+            {{> mac name='Model: ' data=model}}
+            {{> mac name='Speed: ' data=speed}}
+            {{> mac name='Cores: ' data=cores}}
+            {{> mac name='Cache: ' data=cache}}
+            {{/with}}
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{> titlen title='Memory' notmain=true}}
+            <br>
+            {{#with memory}}
+            {{> mac name='Type: ' data=type }}
+            {{> mac name='Size: ' data=size }}
+            {{> mac name='Speed: ' data=speed }}
+            {{/with}}
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{> titlen title='Storage' notmain=true}}
+            <br>
+            {{#with storage}}
+            {{> mac name='Type: ' data=type }}
+            {{> mac name='Size: ' data=size }}
+            {{/with}}
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{> titlen title='Display' notmain=true}}
+            <br>
+            {{#with display}}
+            {{> mac name='Size: ' data=size }}
+            {{> mac name='Resolution: ' data=resolution }}
+            {{> mac name='Technology: ' data=technology }}
+            {{> mac name='Color_space: ' data=color_space }}
+            {{> mac name='Brightness: ' data=brightness }}
+            {{> mac name='Refresh_rate: ' data=refresh_rate }}
+            {{/with}}
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{> titlen title='Graphics' notmain=true}}
+            <br>
+            {{#with graphics}}
+            {{> mac name='Brand: ' data=brand }}
+            {{> mac name='Model: ' data=model }}
+            {{> mac name='Memory: ' data=memory }}
+            {{/with}}
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{> titlen title='Ports' notmain=true}}
+            <br>
+            {{#each ports}}
+            {{> mac name='Type: ' data=type }}
+            {{> mac name='Count: ' data=count }}
+            {{/each}}
+            <p class="text-center"> {{ports.[0].features}} </p>
+            {{#each features}}
+            {{!-- <span><b> {{this}}/ </b></span> --}}
+            {{!-- {{> mac name='Type: ' data=type }} --}}
+            {{/each}}
+            <p class="text-center"> {{ports.[0].features}}/ </p>
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{> titlen title='Battery' notmain=true}}
+            <br>
+            {{#with battery}}
+            {{> mac name='Type: ' data=type }}
+            {{> mac name='Capacity: ' data=capacity }}
+            {{> mac name='Life: ' data=life }}
+            {{/with}}
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{> titlen title='Weight and dimensions' }}
+            <br>
+            {{> mac name='Weight: ' data=weight }}
+            {{#with dimensions}}
+            {{> mac name='Hight: ' data=height }}
+            {{> mac name='Width: ' data=width }}
+            {{> mac name='Depth: ' data=depth }}
+            {{/with}}
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{> titlen title='Operating system' }}
+            {{> mac data=operating_system }}
+        </div>
+        <br>
+        <hr>
+        <div>
+            {{> titlen title='Accessories' }}
+            <br>
+            {{#each accessories}}
+            {{> mac name='Name: ' data=name }}
+            {{> mac name='Price: ' data=price }}
+            <br>
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+</section>
