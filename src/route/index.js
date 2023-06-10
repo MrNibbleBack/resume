@@ -67,7 +67,7 @@ router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
     // ↙ сюди вводимо JSON дані
-    
+
     layout: 'resume',
 
     page: {
@@ -148,7 +148,6 @@ router.get('/skills', function (req, res) {
 
 router.get('/education', function (req, res) {
   res.render('education', {
-
     layout: 'resume',
 
     page: {
@@ -993,6 +992,226 @@ router.get('/web', function (req, res) {
   })
 })
 
+//=================================================================
+
+router.get('/js', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('js', {
+    layout: 'basic',
+    page: {
+      title: 'Resume | JavaScript',
+    },
+    name: 'JavaScript',
+    description:
+      'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
+    history: {
+      year: 1995,
+      founder: 'Brendan Eich',
+    },
+    types: [
+      'Number',
+      'String',
+      'Boolean',
+      'Null',
+      'Undefined',
+      'Symbol',
+      'Object',
+    ],
+    syntax: {
+      variables: ['var', 'let', 'const'],
+      functions: ['function'],
+      conditionals: ['if', 'else', 'switch'],
+      loops: ['for', 'while', 'do-while'],
+      classes: ['class'],
+    },
+    features: [
+      'First-class functions',
+      'Closures',
+      'Dynamic typing',
+      'Prototype-based inheritance',
+      'Asynchronous programming with Promises and async/await',
+      'Modules with import/export statements',
+    ],
+    libraries: [
+      'jQuery',
+      'React',
+      'Angular',
+      'Vue',
+      'Node.js',
+      'Express.js',
+      'Lodash',
+      'Moment.js',
+    ],
+    tools: [
+      'Babel',
+      'Webpack',
+      'ESLint',
+      'Jest',
+      'Mocha',
+      'Chai',
+      'Selenium',
+      'Cypress',
+    ],
+    community: [
+      {
+        name: 'Stack Overflow',
+        type: 'forum',
+      },
+      {
+        name: 'JavaScript Weekly',
+        type: 'newsletter',
+      },
+      {
+        name: 'The Changelog',
+        type: 'podcast',
+      },
+      {
+        name: 'CSS-Tricks',
+        type: 'blog',
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+//=================================================================
+
+router.get('/task21', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('task21', {
+    layout: 'basic',
+    page: {
+      title: 'Resume | Task21',
+    },
+    heading: {
+      main: {
+        title: 'JavaScript',
+        text: 'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
+        button_text: {
+          solid: 'Open page',
+          outline: 'Add to cart',
+        },
+      },
+      second: {
+        title: 'Stack Overflow',
+        text: 'First-class functions',
+        button_text: {
+          solid: 'Open page',
+          outline: 'Add to cart',
+        },
+      },
+      subblock: {
+        title: 'JavaScript Weekly',
+        text: 'Prototype-based inheritance newsletter',
+        button_text: {
+          solid: 'Open page',
+          outline: 'Add to cart',
+        },
+      },
+    },
+    nested_display: {
+      title: 'HTML',
+      children_display: {
+        title: 'Outdated HTML tags',
+        text: 'tags that have been identified as deprecated and not recommended for use in HTML version 5',
+        button: {
+          text: 'Орen',
+        },
+      },
+      header_text: 'Sections',
+      button: {
+        text: 'Learn more',
+      },
+    },
+    paragraph: {
+      title: 'About modules',
+      text: 'Modules with import/export statements',
+
+      button: {
+        text: 'Open link page',
+        url: 'https://google.com',
+      },
+      list_name: [
+        {
+          text: 'Github',
+          url: 'https://github.com/',
+        },
+        {
+          text: 'Bootstrap',
+          url: 'https://getbootstrap.com/',
+        },
+      ],
+    },
+  })
+})
+
+//============================================================================================
+
+router.get('/task22', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('task22', {
+    layout: 'basic',
+    page: {
+      title: 'Resume | Task22',
+    },
+    page_header: {
+      title: 'InnovaMind',
+      description: 'Welcome to our wonderful community',
+    },
+    section: {
+      about_us: {
+        title_list: {
+          main: 'InnovaMind',
+          sub: 'InnovaMind is a forward-thinking startup focused on innovation. We are dedicated to creating efficient and powerful software through the use of first-class functions.',
+        },
+        button: { text: 'Show more' },
+      },
+      advantage: {
+        title: 'Advantage',
+        efficiency: {
+          title: 'Efficiency',
+          sub_title: 'Streamline your software development',
+          description:
+            'Streamline your software development with our innovative platform...',
+          button: 'Show more',
+        },
+        innovation: {
+          title: 'Innovation',
+          sub_title:
+            'Forward-thinking approach to programming',
+          description:
+            ' Stay ahead of the curve with our forward-thinking approach to programming...',
+          button: 'Show more',
+        },
+        collaboration: {
+          title: 'Collaboration',
+          sub_title: 'Connect with like-minded developers',
+          description:
+            'Connect with a community of like-minded developers to share knowledge and insights...',
+          button: 'Show more',
+        },
+      },
+      agreement: {
+        title: 'Terms of use',
+        info: {
+          sub_title: 'Check out our requirements',
+          detail: {
+            text: 'By using or accessing the service, you agree to be bound by the terms and conditions outlined in the agreement.',
+            button: 'Аccept',
+          },
+        },
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
 //==========================================================================
 
 router.get('/task31', function (req, res) {
@@ -1247,227 +1466,9 @@ router.get('/task31', function (req, res) {
           link: 'https://www.starkindustries.com/',
         },
       ],
-=======
-//=================================================================
-
-router.get('/js', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('js', {
-    layout: 'basic',
-    page: {
-      title: 'Resume | JavaScript',
-    },
-    name: 'JavaScript',
-    description:
-      'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
-    history: {
-      year: 1995,
-      founder: 'Brendan Eich',
-    },
-    types: [
-      'Number',
-      'String',
-      'Boolean',
-      'Null',
-      'Undefined',
-      'Symbol',
-      'Object',
-    ],
-    syntax: {
-      variables: ['var', 'let', 'const'],
-      functions: ['function'],
-      conditionals: ['if', 'else', 'switch'],
-      loops: ['for', 'while', 'do-while'],
-      classes: ['class'],
-    },
-    features: [
-      'First-class functions',
-      'Closures',
-      'Dynamic typing',
-      'Prototype-based inheritance',
-      'Asynchronous programming with Promises and async/await',
-      'Modules with import/export statements',
-    ],
-    libraries: [
-      'jQuery',
-      'React',
-      'Angular',
-      'Vue',
-      'Node.js',
-      'Express.js',
-      'Lodash',
-      'Moment.js',
-    ],
-    tools: [
-      'Babel',
-      'Webpack',
-      'ESLint',
-      'Jest',
-      'Mocha',
-      'Chai',
-      'Selenium',
-      'Cypress',
-    ],
-    community: [
-      {
-        name: 'Stack Overflow',
-        type: 'forum',
-      },
-      {
-        name: 'JavaScript Weekly',
-        type: 'newsletter',
-      },
-      {
-        name: 'The Changelog',
-        type: 'podcast',
-      },
-      {
-        name: 'CSS-Tricks',
-        type: 'blog',
-      },
-    ],
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
-//=================================================================
-
-router.get('/task21', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('task21', {
-    layout: 'basic',
-    page: {
-      title: 'Resume | Task21',
-    },
-    heading: {
-      main: {
-        title: 'JavaScript',
-        text: 'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
-        button_text: {
-          solid: 'Open page',
-          outline: 'Add to cart',
-        },
-      },
-      second: {
-        title: 'Stack Overflow',
-        text: 'First-class functions',
-        button_text: {
-          solid: 'Open page',
-          outline: 'Add to cart',
-        },
-      },
-      subblock: {
-        title: 'JavaScript Weekly',
-        text: 'Prototype-based inheritance newsletter',
-        button_text: {
-          solid: 'Open page',
-          outline: 'Add to cart',
-        },
-      },
-    },
-    nested_display: {
-      title: 'HTML',
-      children_display: {
-        title: 'Outdated HTML tags',
-        text: 'tags that have been identified as deprecated and not recommended for use in HTML version 5',
-        button: {
-          text: 'Орen',
-        },
-      },
-      header_text: 'Sections',
-      button: {
-        text: 'Learn more',
-      },
-    },
-    paragraph: {
-      title: 'About modules',
-      text: 'Modules with import/export statements',
-
-      button: {
-        text: 'Open link page',
-        url: 'https://google.com',
-      },
-      list_name: [
-        {
-          text: 'Github',
-          url: 'https://github.com/',
-        },
-        {
-          text: 'Bootstrap',
-          url: 'https://getbootstrap.com/',
-        },
-      ],
     },
   })
 })
-
-//============================================================================================
-
-router.get('/task22', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('task22', {
-    layout: 'basic',
-    page: {
-      title: 'Resume | Task22',
-    },
-    page_header: {
-      title: 'InnovaMind',
-      description: 'Welcome to our wonderful community',
-    },
-    section: {
-      about_us: {
-        title_list: {
-          main: 'InnovaMind',
-          sub: 'InnovaMind is a forward-thinking startup focused on innovation. We are dedicated to creating efficient and powerful software through the use of first-class functions.',
-        },
-        button: { text: 'Show more' },
-      },
-      advantage: {
-        title: 'Advantage',
-        efficiency: {
-          title: 'Efficiency',
-          sub_title: 'Streamline your software development',
-          description:
-            'Streamline your software development with our innovative platform...',
-          button: 'Show more',
-        },
-        innovation: {
-          title: 'Innovation',
-          sub_title:
-            'Forward-thinking approach to programming',
-          description:
-            ' Stay ahead of the curve with our forward-thinking approach to programming...',
-          button: 'Show more',
-        },
-        collaboration: {
-          title: 'Collaboration',
-          sub_title: 'Connect with like-minded developers',
-          description:
-            'Connect with a community of like-minded developers to share knowledge and insights...',
-          button: 'Show more',
-        },
-      },
-      agreement: {
-        title: 'Terms of use',
-        info: {
-          sub_title: 'Check out our requirements',
-          detail: {
-            text: 'By using or accessing the service, you agree to be bound by the terms and conditions outlined in the agreement.',
-            button: 'Аccept',
-          },
-        },
-      },
-    },
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
 
 //=================================================================
 
