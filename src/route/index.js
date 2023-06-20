@@ -2138,7 +2138,19 @@ router.get('/shophome', function (req, res) {
 router.get('/bootstrap', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
-    layout: 'basic',
+    layout: 'bootstrap',
+    page: {
+      title: 'Resume|Bootstrap',
+    },
+  })
+})
+
+//=================================================================
+
+router.get('/bootstrapl6', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrapl6', {
+    layout: 'bootstrap',
     page: {
       title: 'Resume|Bootstrap',
     },
