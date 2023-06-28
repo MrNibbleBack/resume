@@ -3378,6 +3378,16 @@ router.get('/shopcatalog', function (req, res) {
 
 // ******************************** CSS **************************
 
+router.get('/bootstrapcss', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrapcss', {
+    layout: 'bootstrapcss',
+    page: {
+      title: 'Resume|Bootstrap',
+    },
+  })
+})
+
 // ================================================================
 
 // Підключаємо роутер до бек-енду
