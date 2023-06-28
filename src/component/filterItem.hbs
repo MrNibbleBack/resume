@@ -1,0 +1,11 @@
+<div>
+    {{#with dim}}
+    <div class="form-label pb-3"> {{title}} </div>
+    {{#each options}}
+    <div class="form-check py-1">
+        <label class="form-check-label"> {{value}} </label>
+        <input name="brand" type="checkbox" class="form-check-input">
+    </div>
+    {{/each}}
+    {{/with}}
+</div>
