@@ -3,21 +3,17 @@
         <span class="badge bg-secondary"> {{name}} </span>
     </h1>
     <hr>
-    <div>
-        <br>
+    <div class="my-3 py-1">
         <p class="text-center"><i> {{description}} </i></p>
         <p class="text-center">Price: {{price}} </p>
         <p class="text-center">Category: {{category}} </p>
     </div>
     <hr>
-    <br>
-    <div>
+    <div class="my-4">
         {{> titlen title='Features' main=true }}
-        <br>
         {{#with features}}
-        <div>
+        <div class="my-3">
             {{> titlen title='Processor' notmain=true }}
-            <br>
             {{#with processor}}
             {{> mac name='Brand: ' data=brand}}
             {{> mac name='Model: ' data=model}}
@@ -26,9 +22,8 @@
             {{> mac name='Cache: ' data=cache}}
             {{/with}}
         </div>
-        <br>
         <hr>
-        <div>
+        <div class="my-3">
             {{> titlen title='Memory' notmain=true}}
             <br>
             {{#with memory}}
@@ -37,9 +32,8 @@
             {{> mac name='Speed: ' data=speed }}
             {{/with}}
         </div>
-        <br>
         <hr>
-        <div>
+        <div class="my-3">
             {{> titlen title='Storage' notmain=true}}
             <br>
             {{#with storage}}
@@ -47,11 +41,9 @@
             {{> mac name='Size: ' data=size }}
             {{/with}}
         </div>
-        <br>
         <hr>
-        <div>
+        <div class="my-3">
             {{> titlen title='Display' notmain=true}}
-            <br>
             {{#with display}}
             {{> mac name='Size: ' data=size }}
             {{> mac name='Resolution: ' data=resolution }}
@@ -61,22 +53,18 @@
             {{> mac name='Refresh_rate: ' data=refresh_rate }}
             {{/with}}
         </div>
-        <br>
         <hr>
-        <div>
+        <div class="my-3">
             {{> titlen title='Graphics' notmain=true}}
-            <br>
             {{#with graphics}}
             {{> mac name='Brand: ' data=brand }}
             {{> mac name='Model: ' data=model }}
             {{> mac name='Memory: ' data=memory }}
             {{/with}}
         </div>
-        <br>
         <hr>
-        <div>
+        <div class="my-3">
             {{> titlen title='Ports' notmain=true}}
-            <br>
             {{#each ports}}
             {{> mac name='Type: ' data=type }}
             {{> mac name='Count: ' data=count }}
@@ -86,11 +74,10 @@
             {{!-- <span><b> {{this}}/ </b></span> --}}
             {{!-- {{> mac name='Type: ' data=type }} --}}
             {{/each}}
-            <p class="text-center"> {{ports.[0].features}}/ </p>
+            {{!-- <p class="text-center"> {{ports.[0].features}} </p> --}}
         </div>
-        <br>
         <hr>
-        <div>
+        <div class="my-3">
             {{> titlen title='Battery' notmain=true}}
             <br>
             {{#with battery}}
@@ -99,11 +86,9 @@
             {{> mac name='Life: ' data=life }}
             {{/with}}
         </div>
-        <br>
         <hr>
-        <div>
+        <div class="my-3">
             {{> titlen title='Weight and dimensions' }}
-            <br>
             {{> mac name='Weight: ' data=weight }}
             {{#with dimensions}}
             {{> mac name='Hight: ' data=height }}
@@ -111,21 +96,17 @@
             {{> mac name='Depth: ' data=depth }}
             {{/with}}
         </div>
-        <br>
         <hr>
-        <div>
+        <div class="my-3">
             {{> titlen title='Operating system' }}
             {{> mac data=operating_system }}
         </div>
-        <br>
         <hr>
-        <div>
+        <div class="my-3">
             {{> titlen title='Accessories' }}
-            <br>
             {{#each accessories}}
             {{> mac name='Name: ' data=name }}
             {{> mac name='Price: ' data=price }}
-            <br>
             {{/each}}
         </div>
         {{/with}}

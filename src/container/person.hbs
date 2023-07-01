@@ -1,13 +1,13 @@
-<div>
+<div class="mx-3">
     <main>
         {{#with person}}
         <h1> {{name}} </h1>
         <hr>
         <p>Age: {{age}}</p>
         <p>Sex: {{gender}}</p>
-        <section>
+        <section class="my-3">
             {{#with address}}
-            <div>
+            <div class="my-4">
                 {{> title data='Address'}}
                 <address>
                     {{country}},

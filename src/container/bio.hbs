@@ -1,8 +1,8 @@
-<div>
+<div class="m-4">
     <section>
         <h1>{{name}}</h1>
         <hr>
-        <div>
+        <div class="p-3">
             <p>Date of birth: {{birthdate}} </p>
             <p>Place of birth: {{birthplace}} </p>
             <p>Date of death: {{deathdate}} </p>
@@ -10,7 +10,7 @@
             <p>Nationality: {{nationality}} </p>
             <p>Occupation: {{occupation}} </p>
         </div>
-        <div>
+        <div class="p-3">
             <hr>
             {{> title data="Known for:"}}
             <ol>
@@ -22,7 +22,7 @@
             </ol>
             </p>
         </div>
-        <div>
+        <div class="p-3">
             {{> bioinfo chapter="Education:" dim=education }}
             {{> bioinfo chapter="Notable publications:" dim=notable_publications }}
             {{> bioinfo chapter="Partners:" dim=partners }}
