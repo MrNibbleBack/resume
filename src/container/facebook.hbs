@@ -5,14 +5,13 @@
         </h1>
     </div>
     <hr>
-    <div>
+    <div class="my-3">
         {{#each users}}
         <hr>
         <p class="text-center"><b> Users: </b></p>
         {{> fbu }}
         <hr>
-        <br>
-        <div>
+        <div class="my-3">
             {{#each friends}}
             <p class="text-center"> <b>Friends: </b></p>
             {{> fbu }}
@@ -20,14 +19,14 @@
             <p class="text-center"> <b>Mutual friends: </b> {{> fbu }} </p>
             <br>
             {{/each}} --}}
-            <div>
+            <div class="my-3">
                 {{#each groups}}
                 {{> fbg }}
                 {{/each}}
             </div>
             {{/each}}
         </div>
-        <div>
+        <div class="my-3">
             {{#each groups}}
             {{> fbg }}
             {{/each}}
